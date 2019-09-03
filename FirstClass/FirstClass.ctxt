@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=FirstClass
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ FirstClass\ here.\r\n\r\n\ @author\ (Thomas\ Andrew)\r\n\ @version\ (81519)\r\n
+comment1.params=
+comment1.target=FirstClass()
+comment2.params=floor\ m
+comment2.target=void\ name(java.lang.String,\ int)
+comment3.params=
+comment3.target=void\ main()
+numComments=4
