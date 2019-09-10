@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=MakeArray
+comment1.params=
+comment1.target=MakeArray()
+comment2.params=nums
+comment2.target=double\ getMean(double[])
+comment3.params=
+comment3.target=void\ main()
+numComments=4
