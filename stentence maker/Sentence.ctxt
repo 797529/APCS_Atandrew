@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Sentence
+comment1.params=
+comment1.target=Sentence()
+comment2.params=wordarray
+comment2.target=java.lang.String\ randomPick(java.lang.String[])
+comment3.params=
+comment3.target=java.lang.String\ makeSentence()
+comment4.params=
+comment4.target=void\ main()
+numComments=5
