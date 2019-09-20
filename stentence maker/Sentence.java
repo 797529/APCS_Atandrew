@@ -14,11 +14,11 @@ public class Sentence{
         return wordarray[randomIndex];
     }
     public static String makeSentence(){
-        String[] nouns = {"cow","ceo of racism","dictator","fox","moon","extremist","egg","mortal","pizza","child","fetus","scum"};
-        String[] adjectives = {"quick","ugly","racist","brown","lazy","bright","burnt","enslaved","dead","commie"};
-        String[] verb = {"jumped","ran","died","got cooked","cooked","had fun"};
+        String[] nouns = {"girl","employee","cow","ceo of racism","dictator","fox","moon","extremist","egg","mortal","pizza","child","fetus","scum"};
+        String[] adjectives = {"funny","quick","ugly","racist","brown","lazy","bright","burnt","enslaved","dead","commie","plain"};
+        String[] verb = {"jumped","ran","died","got cooked","cooked","had fun","enjoyed playing"};
         String[] determiners = {"the","my","his","her","your","their","our"};
-        String[] adverbs = {"quickly","happily","smoothly","terribly"};
+        String[] adverbs = {"quickly","happily","smoothly","terribly","","never"};
         String[] prepositions = {"near","over","behind","next to","under"};
         String nounphrase = randomPick(determiners) +" " + randomPick(adjectives) + " " + randomPick(nouns);
         String verbphrase = randomPick(adverbs) + " " + randomPick(verb);
