@@ -14,7 +14,7 @@ public class Sentence{
         return wordarray[randomIndex];
     }
     public static String makeSentence(){
-        String[] nouns = {"cow","dictator","fox","moon","extremist","egg","mortal","pizza","child","fetus","scum"};
+        String[] nouns = {"cow","ceo of racism","dictator","fox","moon","extremist","egg","mortal","pizza","child","fetus","scum"};
         String[] adjectives = {"quick","ugly","racist","brown","lazy","bright","burnt","enslaved","dead","commie"};
         String[] verb = {"jumped","ran","died","got cooked","cooked","had fun"};
         String[] determiners = {"the","my","his","her","your","their","our"};
