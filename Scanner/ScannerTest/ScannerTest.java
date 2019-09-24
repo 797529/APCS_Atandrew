@@ -8,8 +8,6 @@
 
 import java.util.Scanner;
 public class ScannerTest{
-    
-    
     public static void main(){
         Scanner kb = new Scanner(System.in);
         String inputStr = "";
@@ -19,7 +17,5 @@ public class ScannerTest{
             inputStr = kb.nextLine();
             System.out.println(inputStr);
         }
-        
-        
     }
 }
