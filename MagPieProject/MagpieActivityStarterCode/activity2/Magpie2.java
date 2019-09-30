@@ -43,6 +43,9 @@ public class Magpie2
           else if (statement.indexOf("Mr.") >= 0 || statement.indexOf("Mrs.") >= 0){
             response = "Sounds like a nice teacher.";
           }
+        else if (statement.indexOf("1989") >= 0 || statement.indexOf("tiananmen square massacre") >= 0 || statement.indexOf("June 5th, 1989") >= 0){
+            response = "Nothing happened then. I love Xi Jinping! Hail the Chinese Government!";
+          }
           else if (statement.indexOf("capitalism") >= 0 || statement.indexOf("communism") >= 0){
             response = "I don't care about your political views.";
             }
