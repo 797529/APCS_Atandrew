@@ -19,8 +19,11 @@ public class NameParser{
             lastName = kb.nextLine();
             if(lastName.equals("print names")){
                 for(int i = 0; i < namearr.length; i++){
+                    if(namearr[i] != null){
                 System.out.println(namearr[i]);
               }
+             }
+             continue;
             }
             Person fullnm = new Person(lastName);
             System.out.println(fullnm);
