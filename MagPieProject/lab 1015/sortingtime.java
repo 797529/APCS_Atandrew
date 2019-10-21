@@ -19,7 +19,7 @@ public class sortingtime
         for(int b = 0; b < x.length-1;b++){
             f = x[b];
             l = x[b+1];
-            compcount += 1;
+            compcount ++;
             if(f > l){
                 x[b] = l;
                 x[b+1] = f;
@@ -36,7 +36,7 @@ public class sortingtime
             System.out.print(",");
         }
         System.out.println("");
-        System.out.println("Comparisons = " + compcount / 1000);
+        System.out.println("Comparisons = " + compcount);
         System.out.println("Swaps = " + swapcount);
     }
 }
