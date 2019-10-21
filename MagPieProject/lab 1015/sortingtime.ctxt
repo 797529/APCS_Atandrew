@@ -2,8 +2,8 @@
 comment0.target=sortingtime
 comment1.params=
 comment1.target=sortingtime()
-comment2.params=
-comment2.target=int[]\ sorter()
+comment2.params=x
+comment2.target=int[]\ sorter(int[])
 comment3.params=
 comment3.target=void\ main()
 numComments=4
