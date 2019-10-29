@@ -12,6 +12,8 @@ public class NameParser{
         String[] namearr = new String[10];
         int count = 0;
         String inputStr = "";
+        int studnum = 0;
+        String birthdate = "";
         String lastName = "";
         //if(str1 == str2)
         while(!lastName.equals("quit")){
