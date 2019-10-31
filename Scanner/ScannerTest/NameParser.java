@@ -5,10 +5,11 @@
  * @author (Thomas Andrew)
  * @version ()
  */
-import java.util.Scanner;
+import java.util.*;
 public class NameParser{
     public static void main(){
         Scanner kb = new Scanner(System.in);
+        ArrayList<String> cls = new ArrayList<String>(10);
         String[] namearr = new String[10];
         int count = 0;
         String inputStr = "";
@@ -20,16 +21,16 @@ public class NameParser{
             System.out.println("Enter a name or type \"quit\" to quit");
             lastName = kb.nextLine();
             if(lastName.equals("print names")){
-                for(int i = 0; i < namearr.length; i++){
-                    if(namearr[i] != null){
-                System.out.println(namearr[i]);
+                for(int i = 0; i < cls.size(); i++){
+                    if(cls.get(i) != null){
+                System.out.println(cls.get(i));
               }
              }
              continue;
             }
             Person fullnm = new Person(lastName);
             System.out.println(fullnm);
-            namearr[count] = lastName;
+            cls.set(count,lastName);
             count+=1;
         }
     }
