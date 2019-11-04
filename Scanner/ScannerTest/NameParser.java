@@ -10,17 +10,22 @@ public class NameParser{
     public static void main(){
         Scanner kb = new Scanner(System.in);
         ArrayList<Person> cls = new ArrayList<Person>(10);
+        String[] stuIDs = new String[10];
         int count = 0;
+        String studentID = "";
         String inputStr = "";
         String lastName = "";
         //if(str1 == str2)
         while(!lastName.equals("quit")){
             System.out.println("Enter a name or type \"quit\" to quit");
             lastName = kb.nextLine();
+            System.out.println("Type this student's ID:");
+            studentID = kb.nextLine();
+            stuIDs[count] = studentID;
             if(lastName.equals("print names")){
                 for(int i = 0; i < cls.size(); i++){
                     if(cls.get(i) != null){
-                System.out.println(cls.get(i).returnFullName());
+                System.out.println(cls.get(i).returnFullName() + " " + stuIDs[i]);
               }
              }
              continue;
