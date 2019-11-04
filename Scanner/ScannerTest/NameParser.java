@@ -1,20 +1,17 @@
 
 /**
- * Write a description of class NameParser here.
+ * this eats up all your input then spits it into the person object, which is then sorted into names and put into an array list.
  *
  * @author (Thomas Andrew)
- * @version ()
+ * @version (10919)
  */
 import java.util.*;
 public class NameParser{
     public static void main(){
         Scanner kb = new Scanner(System.in);
-        ArrayList<String> cls = new ArrayList<String>(10);
-        String[] namearr = new String[10];
+        ArrayList<Person> cls = new ArrayList<Person>(10);
         int count = 0;
         String inputStr = "";
-        int studnum = 0;
-        String birthdate = "";
         String lastName = "";
         //if(str1 == str2)
         while(!lastName.equals("quit")){
@@ -23,14 +20,13 @@ public class NameParser{
             if(lastName.equals("print names")){
                 for(int i = 0; i < cls.size(); i++){
                     if(cls.get(i) != null){
-                System.out.println(cls.get(i));
+                System.out.println(cls.get(i).returnFullName());
               }
              }
              continue;
             }
             Person fullnm = new Person(lastName);
-            System.out.println(fullnm);
-            cls.set(count,lastName);
+            cls.add(fullnm);
             count+=1;
         }
     }
