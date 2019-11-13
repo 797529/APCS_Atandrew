@@ -48,12 +48,34 @@ public class NameParser{
                 stuIDs.set(stuIDs.indexOf(userinput),null);
                 userinput = kb.nextLine();
             }
+            if(userinput.equals("3")){
+                System.out.println("Enter the Student's ID: ");
+                userinput = kb.nextLine();
+                System.out.println("Enter the new name: ");
+                inputStr = kb.nextLine();
+                Person newname = new Person(inputStr);
+                cls.set(stuIDs.indexOf(userinput),newname);
+                System.out.println("Enter the new id: ");
+                inputStr = kb.nextLine();
+                stuIDs.set(stuIDs.indexOf(userinput),inputStr);
+                userinput = kb.nextLine();
+            }
+            if(userinput.equals("4")){
+                for(int i = 0; i < cls.size(); i++){
+                        if(cls.get(i) != null){
+                       cls.set(i,null);
+                       stuIDs.set(i,null);
+                  }
+                 }
+                 continue;
+            }
             if(userinput.equals("5")){
                     for(int i = 0; i < cls.size(); i++){
                         if(cls.get(i) != null){
                     System.out.println(cls.get(i).returnFullName() + " " + stuIDs.get(i));
                   }
                  }
+                 kb.nextLine();
                  continue;
             }
         }
