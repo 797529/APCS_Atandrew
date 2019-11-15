@@ -10,6 +10,7 @@ public class NameParser{
     public static void clear(){
         System.out.println('\u000c');
     }
+
     public static void main(){
         Scanner kb = new Scanner(System.in);
         ArrayList<Person> cls = new ArrayList<Person>(10);
@@ -62,21 +63,29 @@ public class NameParser{
             }
             if(userinput.equals("4")){
                 for(int i = 0; i < cls.size(); i++){
-                        if(cls.get(i) != null){
-                       cls.set(i,null);
-                       stuIDs.set(i,null);
-                  }
-                 }
-                 continue;
+                    if(cls.get(i) != null){
+                        cls.set(i,null);
+                        stuIDs.set(i,null);
+                    }
+                }
+                continue;
             }
             if(userinput.equals("5")){
-                    for(int i = 0; i < cls.size(); i++){
-                        if(cls.get(i) != null){
-                    System.out.println(cls.get(i).returnFullName() + " " + stuIDs.get(i));
-                  }
-                 }
-                 kb.nextLine();
-                 continue;
+                for(int i = 0; i < cls.size(); i++){
+                    if(cls.get(i) != null){
+                        System.out.println(cls.get(i).returnFullName() + " " + stuIDs.get(i));
+                    }
+                }
+                kb.nextLine();
+                continue;
+            }
+            if(userinput.equals("7")){
+                for(int i = 0; i < cls.size(); i++){
+                    if(cls.get(i) != null){
+
+                    }
+                }
+                continue;
             }
         }
     }
