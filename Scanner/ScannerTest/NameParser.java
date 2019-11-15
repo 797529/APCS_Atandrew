@@ -73,19 +73,30 @@ public class NameParser{
             if(userinput.equals("5")){
                 for(int i = 0; i < cls.size(); i++){
                     if(cls.get(i) != null){
-                        System.out.println(cls.get(i).returnFullName() + " " + stuIDs.get(i));
+                        System.out.println("--------------------------------------------------------");
+                        System.out.println("Name: " + cls.get(i).returnFullName() + "|| Student ID: " + stuIDs.get(i));
+                        System.out.println("--------------------------------------------------------");
                     }
                 }
                 kb.nextLine();
                 continue;
             }
             if(userinput.equals("7")){
-                for(int i = 0; i < cls.size(); i++){
-                    if(cls.get(i) != null){
-
+                for(int b = 0; b < cls.size()-1; b++){
+                    for(int i = 0; i < cls.size()-1; i++){
+                        int l = Integer.parseInt(stuIDs.get(i));
+                        int s = Integer.parseInt(stuIDs.get(i+1));
+                        if(l > s){
+                            String tempID = stuIDs.get(i);
+                            Person tempName = cls.get(i);
+                            stuIDs.set(i, stuIDs.get(i+1));
+                            cls.set(i, cls.get(i+1));
+                            cls.set(i+1, tempName);
+                            stuIDs.set(i+1, tempID);
+                        }
                     }
+                    continue;
                 }
-                continue;
             }
         }
     }
