@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=evalArray
+comment1.params=thisArr
+comment1.target=void\ findMean(int[][])
+comment2.params=thisArr
+comment2.target=java.lang.String\ findMeanTotal(int[][])
+comment3.params=bruh
+comment3.target=java.lang.String\ findMedian(int[][])
+numComments=4
