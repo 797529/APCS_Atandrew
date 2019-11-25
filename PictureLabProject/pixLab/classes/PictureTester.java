@@ -60,7 +60,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
@@ -78,7 +78,7 @@ public class PictureTester
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
-    //testGetCountRedOverValue(250);
+    //testGetCountRedOverValue(0);
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
