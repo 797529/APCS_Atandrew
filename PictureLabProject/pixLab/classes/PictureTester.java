@@ -74,6 +74,13 @@ public class PictureTester
     Walter.flippyVoid();
     Walter.explore();
   }
+  public static void testMirror()
+  {
+    Picture Walter = new Picture("beach.jpg");
+    Walter.explore();
+    Walter.flippyVoid();
+    Walter.explore();
+  }
   public static void testBlackLines()
   {
     Picture Walter = new Picture("beach.jpg");

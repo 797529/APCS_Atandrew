@@ -12,7 +12,12 @@ public class IntArrayWorker
     {
         matrix = theMatrix;
     }
-
+    public void swap(int index, int newindex){
+        int tempindex = index;
+        int tempnew = newindex;
+        index = tempnew;
+        newindex = tempindex;
+    }
     public int getCount(int passedVal){
         int counter = 0;
         for (int row = 0; row < matrix.length; row++)
@@ -52,6 +57,13 @@ public class IntArrayWorker
         return counter;
     }
 
+    public void flipVertical(int[] arr){
+        for (int index = 0; index < matrix.length-1; index++)
+        {
+            swap(index,matrix.length - 1 - index);
+        }
+    }
+    
     /**
      * Method to return the total 
      * @return the total of the values in the array
