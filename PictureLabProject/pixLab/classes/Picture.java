@@ -7,7 +7,7 @@ import java.awt.image.BufferedImage;
 import java.text.*;
 import java.util.*;
 import java.util.List; // resolves problem with java.awt.List and java.util.List
-
+import java.util.Random;
 /**
  * A class that represents a picture.  This class inherits from 
  * SimplePicture and allows the student to add functionality to
@@ -171,6 +171,77 @@ public class Picture extends SimplePicture
         }
     }
 
+    public void moreColor(){
+        Pixel[][] pixels = this.getPixels2D();
+        for (Pixel[] rowArray : pixels)
+        {
+            for (Pixel pixelObj : rowArray)
+            {
+                Random random = new Random();
+                pixelObj.setGreen(random.nextInt(256));
+                pixelObj.setBlue(random.nextInt(256));
+            }
+        }
+    }
+    
+    public void IDK(){
+        Pixel[][] pixels = this.getPixels2D();
+        for (Pixel[] rowArray : pixels)
+        {
+            for (Pixel pixelObj : rowArray)
+            {
+                int tempblue = pixelObj.getBlue();
+                int tempred = pixelObj.getRed();
+                int tempgreen = pixelObj.getGreen();
+                pixelObj.setRed(tempblue);
+                pixelObj.setGreen(tempred);
+                pixelObj.setBlue(tempgreen);
+            }
+        }
+    }
+    
+    public void fixUnderwater(){
+        Pixel[][] pixels = this.getPixels2D();
+        for (Pixel[] rowArray : pixels)
+        {
+            for (Pixel pixelObj : rowArray)
+            {
+                if(pixelObj.getBlue() >= pixelObj.getGreen()){
+                    pixelObj.setBlue(255);
+                    pixelObj.setGreen(0);
+                }
+                else{
+                    pixelObj.setGreen(255);
+                    pixelObj.setBlue(255);
+                    pixelObj.setRed(255);
+                }
+            }
+        }
+    }
+    public void superColor(){
+        Pixel[][] pixels = this.getPixels2D();
+        for (Pixel[] rowArray : pixels)
+        {
+            for (Pixel pixelObj : rowArray)
+            {
+                if(pixelObj.getBlue() > pixelObj.getGreen() && pixelObj.getBlue() > pixelObj.getRed()){
+                    pixelObj.setBlue(255);
+                    pixelObj.setGreen(0);
+                    pixelObj.setRed(0);
+                }
+                 else if(pixelObj.getRed() > pixelObj.getGreen() && pixelObj.getRed() > pixelObj.getBlue()){
+                    pixelObj.setBlue(0);
+                    pixelObj.setGreen(0);
+                    pixelObj.setRed(255);
+                }
+                else{
+                    pixelObj.setGreen(255);
+                    pixelObj.setBlue(0);
+                    pixelObj.setRed(0);
+                }
+            }
+        }
+    }
     public void redmodePic()
     {
         Pixel[][] pixels = this.getPixels2D();

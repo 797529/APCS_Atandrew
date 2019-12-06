@@ -43,14 +43,14 @@ public class PictureTester
   {
     Picture Walter = new Picture("beach.jpg");
     Walter.explore();
-    Walter.voidify();
+    Walter.superColor();
     Walter.explore();
   }
   public static void testAntiVoidify()
   {
     Picture Walter = new Picture("beach.jpg");
     Walter.explore();
-    Walter.antivoidify();
+    Walter.moreColor();
     Walter.explore();
   }
   public static void testNegative()
@@ -88,11 +88,11 @@ public class PictureTester
     Walter.flippyBlack();
     Walter.explore();
   }
-  public static void testBlack()
+  public static void testColors()
   {
     Picture Walter = new Picture("beach.jpg");
     Walter.explore();
-    Walter.floppyBlack();
+    Walter.IDK();
     Walter.explore();
 }
   public static void testZeroRed()
@@ -127,6 +127,12 @@ public class PictureTester
     Walter.zeroBlue();
     Walter.explore();
   }
+  public static void testFixUnderwater(){
+    Picture water = new Picture("water.jpg");
+    water.explore();
+    water.fixUnderwater();
+    water.explore();
+    }
   public static void testGrayscale()
   {
     Picture Walter = new Picture("beach.jpg");
