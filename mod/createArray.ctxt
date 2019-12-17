@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.target=createArray
-comment1.params=
-comment1.target=createArray()
-comment2.params=newArr2d
-comment2.target=int[][]\ loadNewArr(int[][])
-numComments=3
