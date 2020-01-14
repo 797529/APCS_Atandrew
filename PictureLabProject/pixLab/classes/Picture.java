@@ -504,6 +504,7 @@ public class Picture extends SimplePicture
      */
     public void edgeDetection(int edgeDist)
     {
+        Random random = new Random();
         Pixel leftPixel = null;
         Pixel rightPixel = null;
         Pixel[][] pixels = this.getPixels2D();
@@ -517,10 +518,50 @@ public class Picture extends SimplePicture
                 rightPixel = pixels[row][col+1];
                 rightColor = rightPixel.getColor();
                 if (leftPixel.colorDistance(rightColor) > 
-                edgeDist)
-                    leftPixel.setColor(Color.BLACK);
+                edgeDist){
+                    if(  col <= pixels[0].length/10){
+                    leftPixel.setRed(random.nextInt(256));
+                    leftPixel.setBlue(random.nextInt(1));
+                    leftPixel.setGreen(random.nextInt(1));}
+                    if(  col > pixels[0].length/10 && col <= pixels[0].length/10 *2){
+                    leftPixel.setRed(random.nextInt(256));
+                    leftPixel.setBlue(random.nextInt(128));
+                    leftPixel.setGreen(random.nextInt(1));}
+                    if(  col > pixels[0].length/10*2 && col <= pixels[0].length/10 *3){
+                    leftPixel.setRed(random.nextInt(256));
+                    leftPixel.setBlue(random.nextInt(256));
+                    leftPixel.setGreen(random.nextInt(1));}
+                    if(  col > pixels[0].length/10*3 && col <= pixels[0].length/10 *4){
+                    leftPixel.setRed(random.nextInt(128));
+                    leftPixel.setBlue(random.nextInt(256));
+                    leftPixel.setGreen(random.nextInt(1));}
+                    if(  col > pixels[0].length/10*4 && col<= pixels[0].length/10 *5){
+                    leftPixel.setRed(random.nextInt(1));
+                    leftPixel.setBlue(random.nextInt(256));
+                    leftPixel.setGreen(random.nextInt(1));}
+                    if(  col > pixels[0].length/10*5 && col <= pixels[0].length/10 *6){
+                    leftPixel.setRed(random.nextInt(1));
+                    leftPixel.setBlue(random.nextInt(256));
+                    leftPixel.setGreen(random.nextInt(128));}
+                    if(  col > pixels[0].length/10*6 && col <= pixels[0].length/10 *7){
+                    leftPixel.setRed(random.nextInt(1));
+                    leftPixel.setBlue(random.nextInt(256));
+                    leftPixel.setGreen(random.nextInt(256));}
+                    if(  col > pixels[0].length/10*7 && col <= pixels[0].length/10 *8){
+                    leftPixel.setRed(random.nextInt(1));
+                    leftPixel.setBlue(random.nextInt(128));
+                    leftPixel.setGreen(random.nextInt(256));}
+                    if(  col > pixels[0].length/10*8 && col <= pixels[0].length/10 *9){
+                    leftPixel.setRed(random.nextInt(1));
+                    leftPixel.setBlue(random.nextInt(1));
+                    leftPixel.setGreen(random.nextInt(256));}
+                    if(col > pixels[0].length/10*9 && col<= pixels[0].length-1){
+                    leftPixel.setRed(random.nextInt(1));
+                    leftPixel.setBlue(random.nextInt(1));
+                    leftPixel.setGreen(random.nextInt(128));}
+                }
                 else
-                    leftPixel.setColor(Color.WHITE);
+                    leftPixel.setColor(Color.BLACK);
             }
         }
     }
